@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+
+
+body {
+    font-family: "Open Sans", sans-serif;
+}
+
+.wrapper {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.parent {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.child1, .child2 {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    opacity: 0;
+    animation: slide-in 1s ease-in-out forwards;
+}
+
+.child1 {
+    height: 280px; 
+    animation-delay: 0.2s; 
+}
+
+.child2 {
+    height: 280px; 
+    animation-delay: 0.4s; 
+}
+
+@keyframes slide-in {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    transition: transform 0.3s ease-in-out;
+}
+
+.img:hover {
+    transform: scale(1.1); 
+}
+
+.but {
+    background-color: rgb(68, 104, 111);
+    margin: 35px;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.but:hover {
+    background-color: rgb(50, 80, 85); 
+}
+
+h4, p {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+}
